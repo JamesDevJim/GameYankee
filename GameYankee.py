@@ -1,7 +1,21 @@
-import serial
+##IMPORTS
+#import serial # Maybe don't need this if pyFirmata works...
 import time
-import pyfirmata
-import pygame
+
+try:
+    import pyfirmata
+except:
+    python setup.py
+    # Use this: https://pypi.org/project/pyFirmata/
+    # Or this: https://pypi.org/project/pyFirmata2/
+    # Need to determine which is better to use. pyFirmata1 or pyFirmata2
+
+try:
+    import pygame
+except:
+    py -m pip install -U pygame --user
+    py -m pygame.examples.aliens
+    # https://www.pygame.org/
 
 #BUTTON CONSTANTS
 BUTTON_START = 1
